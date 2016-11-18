@@ -43,13 +43,13 @@ public class Main {
         get("/hello", (req, res) -> {
             StringBuilder builder = new StringBuilder();
             builder.append(req.ip());
-            builder.append(" ");
+            builder.append("\t");
             builder.append(req.userAgent());
-            builder.append(" ");
+            builder.append("\t");
             builder.append(getCurrentTimeStamp());
-            builder.append(" ");
+            builder.append("\t");
             builder.append(req.queryString());
-            builder.append(" ");
+            builder.append("\t");
             builder.append(req.body());
 
             String ret = builder.toString();
